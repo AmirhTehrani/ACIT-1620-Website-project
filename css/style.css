@@ -4,6 +4,67 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #F4EBDD;
+    color: #292B26;
 }
 
-/* Add your styles here */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+h1, h2 {
+    color: #596448;
+}
+
+h3 {
+    color: #292B26;
+}
+
+.site-nav {
+    background-color: #596448;
+    padding: 20px;
+}
+
+.site-nav a {
+    color: #F4EBDD;
+    text-decoration: none;
+}
+
+header h1 {
+    text-align: center;
+}
+
+.menu-intro {
+    text-align: center;
+    padding: 30px;
+}
+
+.menu-intro h2 {
+    color: #596448;
+}
+
+main h2 {
+    color: #596448;
+    border-bottom: 2px solid #BC7052;
+}
+
+article p {
+    color: #292B26;
+}
+
+.price {
+    color: #596448;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+footer {
+    background-color: #292B26;
+    color: #F4EBDD;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    color: #F4EBDD;
+}
