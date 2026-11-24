@@ -27,7 +27,11 @@ h3 {
 
 .site-nav a {
     color: #F4EBDD;
-    text-decoration: none;
+
+}
+
+.menu-nav a {
+    color: #BC7052;
 }
 
 header h1 {
@@ -68,3 +72,4 @@ footer {
 footer p {
     color: #F4EBDD;
 }
+
