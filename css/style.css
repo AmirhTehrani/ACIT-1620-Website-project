@@ -1,11 +1,10 @@
-/* Olive & Ember Project - Starter Styles */
+/* Added comments to help teammates understand my thought process or why i added it */
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #F4EBDD;
     color: #292B26;
+    margin: 0;
 }
 
 h1, h2, h3 {
@@ -14,52 +13,278 @@ h1, h2, h3 {
 
 h1, h2 {
     color: #596448;
+    text-align: center;
+}
+
+h2 {
+    font-size: 25px;
 }
 
 h3 {
     color: #292B26;
 }
 
+
+/*
+site navigation
+- align items makes it so the olive and ember link and the otehr links are centered
+- padding was just a visula choice (the background color of the padding)
+- display is so that olive garden and the links are not stacked
+*/
+
 .site-nav {
+    display: flex;
+    align-items: center;
     background-color: #596448;
-    padding: 20px;
+    padding: 10px;
+    font-size: 17px;
 }
+
+
+/*
+-Nav links covers links of the page (to go to different page)
+- list style type none makes it so that it removes the point form.
+- display makes it so that it is not stacked up against eachotehr
+*/
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+/*
+sita nav a is the logog/thetitle
+- color handles the color
+- I juts used padding left to adjust th epositioning of the text (casue lowkey dont know how to move the txt for the site navigation section
+- text decoration was to remove the underline on the link
+*/
 
 .site-nav a {
     color: #F4EBDD;
-
+    padding-left: 70px;
+    padding-right: 70px;
+    font-family: 'Playfair Display', serif;
+    text-decoration: none;
 }
 
+/* added this to make it change color when you hover */
+
+.site-nav a:hover {
+    color: #BC7052;
+    text-decoration: underline;
+}
+
+/* added text deco to none so taht there is no underline by default */
+
 .menu-nav a {
+    color: #F4EBDD;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+}
+
+.menu-nav a:hover {
     color: #BC7052;
 }
 
-header h1 {
-    text-align: center;
+.menu-nav {
+    background-color: #596448;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    gap: 50px;
 }
 
 .menu-intro {
     text-align: center;
-    padding: 30px;
 }
+
+/* margin left and right was just to center the h2 (cause it wasnt centering with text-align for some reason). Margin left and right auto just centers it automatically by the way.*/
+
+/*nevermind it was becasue h2 was a child so text align only centers the text within the parent and not outside of it whoops*/
 
 .menu-intro h2 {
-    color: #596448;
+    border-bottom: 2px solid #BC7052;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/*
 main h2 {
     color: #596448;
     border-bottom: 2px solid #BC7052;
 }
-
+*/
 article p {
     color: #292B26;
 }
+
+
 
 .price {
     color: #596448;
     font-weight: 600;
     font-size: 20px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+/* featured stuff */
+
+#featured-dishes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.featured-card {
+    flex: 1;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.featured-card img {
+    width: 100%;
+    height: 220px;
+}
+
+/* the reason the margin was 500 px was becasue when i put it to auto the layout/cards were our of place and looked really really uneven. So i decided to mess with the size of the margin (i was thinking of forcing the cards to shift right so that it can reset back to its original area.
+
+/* also the thing was copy and pasted from the intro h2 thingy*/
+
+/* also i added border top becasue i thought it would look cooler lol*/
+
+#featured-dishes h2 {
+    width: 25%;
+    border-top: 2px solid #BC7052;
+    border-bottom: 2px solid #BC7052;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+/* appetizer stuff */
+
+#appetizers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    justify-content: center;
+}
+
+/* added margin here becasue of how uneven it looked originally*/
+
+.appetizers-card {
+    flex: 1;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-left: 8%;
+}
+
+
+.appetizers-card img {
+    width: 75%;
+    height: 250px;
+    object-fit: cover;
+}
+
+#appetizers h2 {
+    width: 25%;
+    border-top: 2px solid #BC7052;
+    border-bottom: 2px solid #BC7052;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+/* main dish stuff */
+/* most of the stuff below were just copy and pasted from the feature dishes css stuff */
+
+#main-course {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+    justify-content: center;
+}
+
+.main-course-card {
+    flex: 0;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.main-course img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+#main-course h2 {
+    width: 25%;
+    border-top: 2px solid #BC7052;
+    border-bottom: 2px solid #BC7052;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+/*salad stuff */
+
+#salads {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+    justify-content: center;
+}
+
+.salads-card {
+    flex: 0;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.salads img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+#salads h2 {
+    width: 25%;
+    border-top: 2px solid #BC7052;
+    border-bottom: 2px solid #BC7052;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+/* beverages stuff */
+
+#beverages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+    justify-content: center;
+}
+
+.beverages-card {
+    flex: 0;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.beverages img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+#beverages h2 {
+    width: 25%;
+    border-top: 2px solid #BC7052;
+    border-bottom: 2px solid #BC7052;
+    margin-left: 500px;
+    margin-right: 500px;
 }
 
 footer {
